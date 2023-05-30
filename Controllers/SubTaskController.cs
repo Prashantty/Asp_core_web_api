@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.InteropServices;
+using TaskApi.ITaskRepository;
+using TaskApi.Models;
 
 namespace TaskApi.Controllers
 {
@@ -7,10 +10,31 @@ namespace TaskApi.Controllers
     [ApiController]
     public class SubTaskController : ControllerBase
     {
-        // Add required dependencies here
-        //public async Task<IActionResult> GetAllSubtasks()
-        //{
+        ISubTask _repo;
+        public SubTaskController(ISubTask _repo)
+        {
+            _repo = _repo;
+        }
 
+        // Add required dependencies here
+        //[HttpGet]
+        //public ActionResult<List<SubTask>> GetSubTasks()
+        //{
+        //    return Ok(_repo.GetAllSubTasks());
         //}
+
+        [HttpGet("{id}")]
+        public SubTask Get(int id) 
+        {
+            return _repo.GetSubTaskById(id);
+        }
+
+        [HttpPost]
+        public void PostTask(SubTask subtask)
+        {
+            _repo.CreateSubTask(subtask);
+        }
+
+
     }
 }

@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using TaskApi.Context;
+using TaskApi.ITaskRepository;
+using TaskApi.TaskRepository;
+
 namespace TaskApi
 {
     public class Program
@@ -9,6 +14,14 @@ namespace TaskApi
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            builder.Services.AddDbContext<TaskDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnction"));
+
+            });
+            builder.Services.AddTransient<ITask, TaskRepo>();
+            builder.Services.AddTransient<ISubTask, SubTaskRepo>();
 
             // Add Required Dependencies here
             var app = builder.Build();

@@ -1,4 +1,6 @@
-﻿namespace TaskApi.ITaskRepository
+﻿using TaskApi.Models;
+
+namespace TaskApi.ITaskRepository
 {
     public interface ITask
     {
@@ -10,11 +12,18 @@
         // Edit some Task
         // Delete some task, in case there is no subtask
 
-        // Add a SubTack for a Task
-        // Get all subtasks for a particular Task
-        // Here in display Task Name, SubtTask Name,Created By, When
+        public void CreateTask(Tsk task);
+        public List<Tsk> GetAllTasks();
 
-        
-        
+        public Tsk GetTaskById(int id);
+
+        public void EditTask(int id, Tsk task);
+        public void DeleteTask(int id);
+
+
+       
+
+
+
     }
 }
