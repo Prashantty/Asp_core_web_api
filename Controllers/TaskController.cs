@@ -12,42 +12,45 @@ namespace TaskApi.Controllers
     {
         // Add required dependencies here
 
-        ITask _repo;
-        public TaskController(ITask repo)
+        ITask _repo1;
+        public TaskController(ITask repo1)
         {
-            _repo = repo;   
+            _repo1= repo1;   
         }
 
         [HttpGet]
         public List<Tsk> GetTasks()
         {
-            return _repo.GetAllTasks();
+            return _repo1.GetAllTasks();
         }
 
         [HttpGet("{id}")]
         public Tsk GetTask(int id)
         {
-            return _repo.GetTaskById(id);   
+            return _repo1.GetTaskById(id);   
         }
 
         [HttpPost]
         public void PostTask(Tsk task)
         {
-             _repo.CreateTask(task);  
+             _repo1.CreateTask(task);  
         }
 
         [HttpPut("{id}")]
         public void EditTask(int id, Tsk tsk)
         {
-            _repo.EditTask(id, tsk);
+            _repo1.EditTask(id, tsk);
 
         }
         [HttpDelete("{id}")]
 
         public void DeleteClint(int id)
         {
-            _repo.DeleteTask(id);
+            _repo1.DeleteTask(id);
         }
+
+       
+
 
 
     }

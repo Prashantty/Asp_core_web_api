@@ -22,7 +22,9 @@ namespace TaskApi.TaskRepository
 
         public List<SubTask> GetAllSubTasks()
         {
+
             var obj = _db.SubTasks.ToList();
+            
             return obj;
 
         }
@@ -30,8 +32,8 @@ namespace TaskApi.TaskRepository
         public SubTask GetSubTaskById(int id)
         {
 
-
-            return  _db.SubTasks.FirstOrDefault(x => x.Id == id);
+            var obj = _db.SubTasks.FirstOrDefault(x => x.Id == id);
+            return obj;
         }
     }
 }

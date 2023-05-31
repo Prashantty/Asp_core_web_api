@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TaskApi.Models;
-using Tsk = TaskApi.Models.Tsk;
+
 
 namespace TaskApi.Context
 {
@@ -15,5 +15,7 @@ namespace TaskApi.Context
 
         public DbSet<Tsk> Tasks { get; set;}
         public DbSet<SubTask> SubTasks { get; set;} 
+
+        public DbSet<User> Users { get; set;}   
     }
 }

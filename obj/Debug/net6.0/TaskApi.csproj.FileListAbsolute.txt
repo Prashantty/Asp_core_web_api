@@ -80,3 +80,9 @@ C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\obj\Debug\net6
 C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\obj\Debug\net6.0\TaskApi.pdb
 C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\obj\Debug\net6.0\TaskApi.genruntimeconfig.cache
 C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\obj\Debug\net6.0\ref\TaskApi.dll
+C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\obj\Debug\net6.0\TaskApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Prashant.Kumar\Desktop\Assessment\task-webapi-assessment\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
