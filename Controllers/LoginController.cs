@@ -25,7 +25,6 @@ namespace TaskApi.Controllers
             
         }
 
-       
         [HttpPost]
         public IActionResult Login(User User)
         {

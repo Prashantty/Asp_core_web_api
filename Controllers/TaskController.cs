@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TaskApi.ITaskRepository;
 using TaskApi.Models;
 
@@ -18,6 +19,7 @@ namespace TaskApi.Controllers
             _repo1= repo1;   
         }
 
+        [Authorize]
         [HttpGet]
         public List<Tsk> GetTasks()
         {
